@@ -15,21 +15,9 @@ function resgataEmpregados(){
             
             $('#tableClientes').css("visibility", "visible");
             
-            var tableHtml = document.getElementById('mustache').innerHTML;
+            var tableHtml = document.getElementById('tableClientes').innerHTML;
             var rendered = Mustache.render(tableHtml, data);
-            $('#mustache').html(rendered);
-            
-            
-            //$('#tableClientes').DataTable();
-            /*
-            $.each(data['content'], function (key, item) {             
-                $('#tableClientes').append('<tr><td>' + item.cpf + '</td> <td>' + 
-                                                        item.nome + '</td> <td>' + 
-                                                        item.nomeAgencia + '</td> <td>' + 
-                                                        item.nomeInstituicao + '</td> </tr>'
-                );
-            });
-            */ 
+            $('#tableClientes').html(rendered);
         }
     });
 }
